@@ -1,36 +1,27 @@
 import { defineConfig } from 'vite';
-import {glob} from 'glob';
-import injectHTML from 'vite-plugin-html-inject';
-import FullReload from 'vite-plugin-full-reload';
+import handlebars from 'vite-plugin-handlebars';
+import { globSync } from 'glob'; // Correct named import
 
-export default defineConfig(({ command }) => {
-  return {
-    define: {
-      [command === 'serve' ? 'global' : '_global']: {},
+// Use globSync to find all HTML files
+const htmlFiles = globSync('./src/*.html');
+
+const input = htmlFiles.reduce((entries, file) => {
+  const name = file.replace('./src/', '').replace('.html', '');
+  entries[name] = file;
+  return entries;
+}, {});
+
+export default defineConfig({
+  root: 'src',
+  build: {
+    rollupOptions: {
+      input, // Use the generated input object
     },
-    root: 'src',
-    base: '/final-project-advenced-js', 
-    headers: [
-      {
-        "key": "Cross-Origin-Embedder-Policy",
-        "value": "unsafe-none"
-      }
-    ],
-    build: {
-      sourcemap: true,
-      rollupOptions: {
-        input: glob.sync('./src/*.html'),
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor';
-            }
-          },
-          entryFileNames: 'commonHelpers.js',
-        },
-      },
-      outDir: '../dist',
-    },
-    plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
-  };
+    outDir: '../dist', // Ensure output is placed outside 'src'
+  },
+  plugins: [
+    handlebars({
+      partialDirectory: './src/partials', // Path to partials
+    }),
+  ],
 });
