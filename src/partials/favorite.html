@@ -1,0 +1,102 @@
+<!-- File favorite.html -->
+<section class="fav-container fav-padding-top">
+  <div class="fav-loader" style="display: none">
+    <div class="fav-spinner">
+      <div class="fav-spinner-inner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <!-- Title favorites -->
+  <h2 class="fav-title">Favorites</h2>
+  <div class="fav-wrapper fav-wrap-js">
+    <div class="fav-left">
+      <div class="fav-quote">
+        <div class="fav-quote-top">
+          <div class="fav-quote-top-left">
+            <div class="fav-icon-block">
+              <svg
+                class="fav-quote-icon"
+                width="20"
+                height="20"
+                aria-label="running-man-icon"
+              >
+                <use href="./img/svg/sprite.svg#icon-run-man"></use>
+              </svg>
+            </div>
+            <p class="fav-quote-top-text">Quote of the day</p>
+          </div>
+          <svg
+            class="fav-icon-commas"
+            width="20"
+            height="20"
+            aria-label="quote-icon"
+          >
+            <use xlink:href="./img/svg/sprite.svg#icon-inverted-commas"></use>
+          </svg>
+        </div>
+        <p class="fav-quote-text">
+          A lot of times I find that people who are blessed with the most talent
+          don't ever develop that attitude, and the ones who aren't blessed in
+          that way are the most competitive and have the biggest heart.
+        </p>
+        <p class="fav-quote-author">Tom Brady</p>
+      </div>
+      <div class="fav-left-bottom">
+        <div class="fav-time">
+          <svg
+            class="fav-time-icon"
+            width="20"
+            height="20"
+            aria-label="dumbbell-icon"
+          >
+            <use href="./img/svg/sprite.svg#icon-dumbbell"></use>
+          </svg>
+          <h3 class="fav-time-title">110 min</h3>
+          <p class="fav-time-text">Daily norm of sports</p>
+        </div>
+        <div>
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                ./img/quote-img/favorites/quote-img-mobile.webp    1x,
+                ./img/quote-img/favorites/quote-img-mobile@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 768px) and (max-width: 1439px)"
+              srcset="
+                ./img/quote-img/favorites/quote-img-tablet.webp    1x,
+                ./img/quote-img/favorites/quote-img-tablet@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/quote-img/favorites/quote-img-desktop.webp    1x,
+                ./img/quote-img/favorites/quote-img-desktop@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <img
+              loading="lazy"
+              class="fav-img"
+              srcset="./img/exercises-img/women-sports@2x.jpg 2x"
+              src="./img/exercises-img/women-sports.jpg"
+              alt="Women talking break"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <ul class="fav-list fav-hidden-scroll filter-list-js"></ul>
+  </div>
+  <div class="fav-overlay"></div>
+</section>
