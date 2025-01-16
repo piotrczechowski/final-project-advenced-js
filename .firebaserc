@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "hosting-test-2fa75"
+  },
+  "headers": [
+    {
+      "key": "Cross-Origin-Embedder-Policy",
+      "value": "unsafe-none"
+    }
+  ],
+  "_comments": {
+    "projects": "Contains configuration for projects. 'default' specifies the default project name.",
+    "headers": {
+      "key": "Specifies the name of the HTTP header.",
+      "value": "Specifies the value assigned to the HTTP header. 'unsafe-none' allows cross-origin content embedding."
+    }
+  }
+}
