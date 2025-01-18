@@ -1,0 +1,66 @@
+<section class="main-hero">
+    <div class="container hero-wrapper">
+      <div class="title-wrapper">
+        <h1 class="main-title">
+          <svg class="icon-sun" width="38" height="38" aria-label="sun-icon">
+            <use href="./images/svg/sprite.svg#icon-sun"></use>
+          </svg>
+          Get <span class="highlight-title">Body&nbsp;</span> in <br />
+          shape, Stay healthy
+        </h1>
+      </div>
+      <p class="description">
+        Transform your physique and embrace a healthier lifestyle with our comprehensive fitness and
+        nutrition support.
+      </p>
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="./images/hero-images/hero-mobile.webp 1x, ./images/hero-images/hero-mobile@2x.webp 2x"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 768px) and (max-width: 1440px)"
+          srcset="./images/hero-images/hero-tablet.webp 1x, ./images/hero-images/hero-tablet@2x.webp 2x"
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 1440px)"
+          srcset="./images/hero-images/hero-desctop.webp 1x, ./images/hero-images/hero-desctop@2x.webp 2x"
+          type="image/webp"
+        />
+        <!-- If the browser does not support the picture element -->
+        <img
+          loading="lazy"
+          class="main-image"
+          src="./images/hero-images/hero-desctop.jpg"
+          srcset="./images/hero-images/hero-desctop@2x.jpg 2x"
+          alt="two-women-are-doing-sports"
+        />
+      </picture>
+      <div class="tags-container">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="./images/hero-images/decoration-img.webp 1x, ./images/hero-images/decoration-img@2x.webp 2x"
+            type="image/webp"
+          />
+          <!-- If the browser does not support the picture element -->
+          <img
+            loading="lazy"
+            class="decoration-image"
+            src="./images/hero-images/decoration-img.png"
+            srcset="./images/hero-images/decoration-img@2x.png 2x"
+            alt="food-friends"
+            width="168"
+          />
+        </picture>
+        <ul class="tags-list">
+          <li class="tag-item">#Sport</li>
+          <li class="tag-item">#Healthy</li>
+          <li class="tag-item">#Workout</li>
+          <li class="tag-item">#Diet</li>
+        </ul>
+      </div>
+    </div>
+  </section>
