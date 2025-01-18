@@ -1,0 +1,153 @@
+.exercise-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quote {
+  display: flex;
+  gap: 18px;
+  padding: 20px;
+  background-color: var(--second-color);
+  border-radius: 20px;
+}
+
+.quote-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: rgba(244, 244, 244, 0.2);
+}
+
+.quote-icon-img {
+  fill: var(--primary-color);
+}
+
+.quote-title {
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+.icon-quote-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.quote-text {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  color: rgba(244, 244, 244, 0.6);
+}
+
+.quote-author {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--primary-color);
+}
+
+.daily {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  min-height: 200px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.daily-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--second-color);
+}
+
+.daily-icon-img {
+  fill: var(--primary-color);
+}
+
+.daily-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--second-color);
+}
+
+.daily-descr {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.28;
+  color: rgba(36, 36, 36, 0.6);
+}
+
+.daily-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #242424;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.img-exe {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .exercise-quote {
+    display: grid;
+    grid-template-columns: 400px 288px;
+    gap: 16px;
+  }
+
+  .quote {
+    padding: 40px;
+  }
+
+  .quote-title {
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 6px;
+  }
+
+  .quote-text {
+    margin-bottom: 18px;
+  }
+
+  .quote-author {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .daily {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .exercise-quote {
+    display: flex;
+    max-width: 444px;
+    gap: 32px;
+  }
+}

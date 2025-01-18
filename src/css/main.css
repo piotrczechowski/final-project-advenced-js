@@ -9,3 +9,6 @@
 @import url("./footer.css");
 
 @import url("../js/pagination/pagination.css");
+@import url('./layout/exercises-left-part.css');
+@import url('./layout/exercises-right-part.css');
+@import url('./layout/exercises-right-part-filter.css');
