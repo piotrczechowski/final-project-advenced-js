@@ -87,20 +87,20 @@ html {
     max-width: 1440px;
   }
 }
-.position-page {
+.positioning-content {
   display: flex;
   gap: 80px;
   flex-direction: column-reverse;
 }
 
 @media screen and (min-width: 768px) {
-  .position-page {
+  .positioning-content{
     gap: 64px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .position-page {
+  .positioning-content {
     gap: 32px;
     flex-direction: row;
   }
