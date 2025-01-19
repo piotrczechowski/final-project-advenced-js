@@ -1,7 +1,7 @@
-import fetchSportEnergy from '../api-exercises';
-// import * as filterBtn from '../filter';
-// import { makeMarkupCards } from '../exercises';
-// import { loader } from '../loader/loader';
+import fetchSportEnergy from '../aplication/apiEnergy.js';
+import * as filterBtn from '../filter.js';
+import { makeMarkupCards } from '../exercises.js';
+import { loader } from '../loader/loader.js';
 
 
 const paginationNumbers = document.querySelector('.pagination-numbers');

@@ -1,46 +1,36 @@
 import iziToast from 'izitoast';
 
-const ToastConfig = {
-  duration: 3000,
-  showCloseButton: false,
-  clickToClose: true,
-  iconType: null,
-  location: 'topRight',
-  fadeInEffect: 'fadeInDown',
-  fadeOutEffect: 'fadeOutUp',
-};
+iziToast.settings({
+  timeout: 3000,
+  resetOnHover: true,
+  icon: 'material-icons',
+  transitionIn: 'flipInX',
+  transitionOut: 'flipOutX',
+  position: 'topRight',
 
-export class Notifications {
-  static showSuccess(msg) {
-    iziToast.success({
-      title: 'Success',
-      titleColor: '#28a745',
-      message: msg,
-      messageColor: '#28a745',
-      progressBarColor: '#28a745',
-      ...ToastConfig,
-    });
-  }
+});
 
-  static showError(msg) {
+class Message {
+  error(message) {
     iziToast.error({
       title: 'Error',
-      titleColor: '#dc3545',
-      message: msg,
-      messageColor: '#dc3545',
-      progressBarColor: '#dc3545',
-      ...ToastConfig,
+      message,
     });
   }
 
-  static showWarning(msg) {
-    iziToast.warning({
-      title: 'Warning',
-      message: msg,
-      titleColor: '#ffc107',
-      messageColor: '#ffc107',
-      progressBarColor: '#ffc107',
-      ...ToastConfig,
+  success(message) {
+    iziToast.success({
+      title: 'OK',
+      message,
+    });
+  }
+
+  info(message) {
+    iziToast.info({
+      title: 'Info',
+      message,
     });
   }
 }
+
+export const message = new Message();
