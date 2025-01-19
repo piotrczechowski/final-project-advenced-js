@@ -6,7 +6,7 @@ import './js/exercises-right-part-filter.js';
 import './js/subscribe.js';
 import './js/notifications.js';
 
-import './js/authentication.js';
+
 import './js/search.js';
 import './js/loader/loader.js';
 import './js/modal-window/modal.js';
