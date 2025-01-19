@@ -23,7 +23,7 @@ let part = currentUrl.slice(-14);
 
 export const onClickPage = () => {
   if (part === "favorites.html") {
-    console.log("asdasdas");
+    console.log("no-wories");
     home.classList.remove("active");
     textHome.classList.remove("black");
     favorites.classList.add("active");
