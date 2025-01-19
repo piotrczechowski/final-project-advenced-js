@@ -6,7 +6,7 @@ class ApiSportEnergy {
             try {
                 return await method();
             } catch (error) {
-                console.error('Помилка при запиті: ', error.message);
+                console.error('Błąd podczas zapytania: ', error.message);
             }
         };
     }
