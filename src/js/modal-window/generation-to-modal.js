@@ -1,4 +1,4 @@
-import sprite from '../../img/svg/sprite.svg';
+import sprite from '../../images/svg/sprite.svg';
 import { capitalizeFirstLetter } from '../utils/firstLater';
 
 function getRating(rating) {

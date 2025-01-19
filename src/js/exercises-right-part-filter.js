@@ -1,12 +1,12 @@
-// import { myModal } from './modal-window/modal';
-// import { getExerciseModal, getRatingModal } from './modal-window/generation-to-modal';
-// import { createInteractiveRaiting } from '../js/raiting';
+import { myModal } from './modal-window/modal';
+import { getExerciseModal, getRatingModal } from './modal-window/generation-to-modal';
+import { createInteractiveRaiting } from '../js/raiting';
 import fetchSportEnergy from './api-exercises';
-// import { addLocalFavorites, deleteLocalFavorites } from './utils/localStor';
-// import { message } from './toasts/message';
+import { addLocalFavorites, deleteLocalFavorites } from './utils/localStor';
+import { message } from './notifications.js';
 import sprite from '../images/svg/sprite.svg';
-// import { addContent } from '../js/favorite/favorite'
-// import { loader } from './loader/loader';
+import { addContent } from '../js/favorite/favorite'
+import { loader } from './loader/loader';
 
 
 const listExercises = document.querySelector('.filter-list-js');
