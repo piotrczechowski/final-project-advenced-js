@@ -99,12 +99,12 @@ function getStartHandler({ target }) {
 
   if (
     validNodeNames.includes(nodeName) &&
-    !classList.contains("favourites_btn_trash_icon") &&
-    !classList.contains("favourites_btn_workout")
+    !classList.contains("fav-btn-trash-icon") &&
+    !classList.contains("fav-btn-workout")
   ) {
     id = dataset.id;
     return oneCard(id);
-  } else if (classList.contains("favourites_btn_trash_icon")) {
+  } else if (classList.contains("fav-btn-trash-icon")) {
     const cardId = dataset.id;
     deleteLocalFavorites(cardId);
     addContent();

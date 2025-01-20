@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YOUR ENERGY</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/izitoast@1/dist/css/iziToast.min.css"
@@ -28,22 +28,20 @@
   </head>
 
   <body>
-    
     <!-- Tutaj wklejamy nazwy plikow do partiali-->
 
-    {{> header}} {{> burger}} {{> hero}} 
+    {{> header}} {{> burger}} {{> hero}}
 
     <main>
-    <section class="container wrap-pd-section">
-      {{>search-section }}
-    <div class="positioning-content">
-      {{> exercises-left-part}}
-      {{> exercises-right-part}} 
-    </div>
-    </section>
+      <section class="container wrap-pd-section">
+        {{>search-section }}
+        <div class="positioning-content">
+          {{> exercises-left-part}} {{> exercises-right-part}}
+        </div>
+      </section>
     </main>
     {{> footer}} {{> modal}}
-    
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
