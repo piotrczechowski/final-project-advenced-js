@@ -267,6 +267,7 @@
 .fav-list {
   display: flex;
   flex-wrap: wrap;
+  min-width: 375px;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -364,7 +365,11 @@
     width: 344px;
   }
   .fav-list {
+    margin: 0 auto;
     max-width: 768px;
+    width: 100%;
+    column-gap: 16px;
+    row-gap: 32px;
     flex-direction: row;
     padding-top: 64px;
   }
@@ -401,9 +406,14 @@
     width: 239px;
   }
   .fav-list {
+    margin: 0;
+    width: 850px;
     max-width: 850px;
+    display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    padding-top: 0;
+    align-items: start;
   }
   .fav-list-item {
     width: 405px;
