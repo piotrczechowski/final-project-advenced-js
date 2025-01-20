@@ -1,20 +1,24 @@
-import fetchSportEnergy from './aplication/apiEnergy.js';
-import { loader } from './loader/loader.js';
+import fetchSportEnergy from "./aplication/apiEnergy.js";
+import { loader } from "./loader/loader.js";
 
 const refs = {
-  quoteText: document.querySelector('.quote-text'),
-  quoteAuthor: document.querySelector('.quote-author'),
+  quoteText: document.querySelector(".quote-text"),
+  quoteAuthor: document.querySelector(".quote-author"),
 };
 
-document.addEventListener('DOMContentLoaded', loadQuote);
+document.addEventListener("DOMContentLoaded", loadQuote);
 
 export async function loadQuote() {
-  const locStor = localStorage.getItem('quote');
+  const locStor = localStorage.getItem("quote");
 
   if (locStor) {
     const currentDate = new Date().toDateString();
 
-    const { date: locStorDate, quote: locStorQuote, author: locStorAuthor } = JSON.parse(locStor);
+    const {
+      date: locStorDate,
+      quote: locStorQuote,
+      author: locStorAuthor,
+    } = JSON.parse(locStor);
 
     if (currentDate !== locStorDate) {
       fetchQuote();
@@ -28,9 +32,9 @@ export async function loadQuote() {
 }
 
 async function fetchQuote() {
-    loader.open();
-    const fetchQuote = await fetchSportEnergy.getQuotes();
-    loader.close()
+  //loader.open();
+  const fetchQuote = await fetchSportEnergy.getQuotes();
+  //loader.close()
 
   const { author, quote } = fetchQuote;
 
@@ -40,7 +44,7 @@ async function fetchQuote() {
     date: new Date().toDateString(),
   };
 
-  localStorage.setItem('quote', JSON.stringify(quoteObj));
+  localStorage.setItem("quote", JSON.stringify(quoteObj));
 
   refs.quoteText.innerHTML = quote;
   refs.quoteAuthor.innerHTML = author;

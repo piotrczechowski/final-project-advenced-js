@@ -3,6 +3,7 @@ const favorites = document.getElementById("favorites");
 const textHome = document.getElementById("home-text");
 const textFavorite = document.getElementById("favorites-text");
 const currentUrl = window.location.href.toString();
+import { addContent } from "../js/favorite/favorite";
 
 // const pageTabs = document.querySelectorAll(".page-navigation-item");
 
@@ -28,6 +29,7 @@ export const onClickPage = () => {
     textHome.classList.remove("black");
     favorites.classList.add("active");
     textFavorite.classList.add("black");
+    addContent();
   } else {
     console.log("HOME");
     home.classList.add("active");

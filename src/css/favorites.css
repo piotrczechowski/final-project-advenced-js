@@ -279,6 +279,16 @@
   max-height: 600px;
 }
 
+.favorite-text {
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 318px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.28;
+}
+
 @media screen and (max-width: 767px) {
   .fav-title {
     font-size: 28px;
@@ -355,6 +365,13 @@
   .fav-list-item {
     width: 344px;
   }
+
+  .favorite-text {
+    padding-top: 132px;
+    max-width: 554px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -384,5 +401,10 @@
   }
   .fav-list-item {
     width: 405px;
+  }
+
+  .favorite-text {
+    padding-top: 0;
+    margin: auto;
   }
 }
